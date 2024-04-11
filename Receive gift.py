@@ -1,16 +1,16 @@
 import pyautogui as pag
 import time 
-max_create_count = 4
+max_create_count = 20
 complete = False
 time.sleep(0.3)
 
 while not complete:
-    pag.moveTo(x=1583, y=326, duration=1)
-    pag.click(x=1583, y=326)
+
+    pag.click(x=1677, y=221,interval=0.65)
     time.sleep(0.1)
 
-    pag.moveTo(x=1175, y=985, duration=1)
-    pag.click(x=1175, y=985)
+    
+    pag.click(x=1264, y=669 , interval=0.65)
     time.sleep(0.1)
 
 
