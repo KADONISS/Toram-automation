@@ -45,16 +45,29 @@ def check_and_click_image():
         Ok_btn = pyautogui.locateCenterOnScreen('img/Ok-btn.png', confidence=0.9)
         pyautogui.click(Ok_btn)
         
-        
+#Scroll down and Scroll up but when image is detected stop and click the image
+    while True:
+        if pyautogui.locateCenterOnScreen('img/image.png', confidence=0.7):
+            break
+        else:
+            scroll_down()
+            if scroll_down() == True:
+                scroll_up         
           
+def scroll_up():
+    for i in range(5):
+        pyautogui.scroll(50)
+        time.sleep(1)
+    return True
 
    
     
     
-def scroll_down(n):
-        for i in range(n):
+def scroll_down():
+        for i in range(5):
             pyautogui.scroll(-50)
             time.sleep(1)
+        return True
 
 
 
